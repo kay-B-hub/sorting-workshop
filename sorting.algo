@@ -1,0 +1,33 @@
+// Function to sort an array using insertion sort
+
+FUNCTION sorting(VAR tab[], int n) : INTEGER
+VAR
+    i,j,val : INTEGER;
+BEGIN
+    
+    FOR i FROM 1 TO n  DO
+     
+        val = tab[i];     // 11 2 5 9 1 3
+        j = i - 1;  
+        
+        // Move elements of tab[0..i-1], that are greater than key, to one position ahead  
+        //of their current position 
+       
+       
+        WHILE (j >= 0 && tab[j] > val) DO
+        
+            tab[j + 1] = tab[j];  
+            j = j - 1;  
+        
+        END WHILE
+        
+        tab[j + 1] = val;  
+    
+    END FOR  
+
+    RETURN tab[i] ;
+END
+
+
+
+
